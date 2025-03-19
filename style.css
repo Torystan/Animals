@@ -4,7 +4,7 @@ body {
     background-color: #faf3dd;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath d='M1 3h1v1H1V3zm2-2h1v1H3V1z' fill='%23d5e0c7' fill-opacity='0.4'%3E%3C/path%3E%3C/svg%3E");
     margin: 0;
-    padding: 20px;
+    padding: 10px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -14,12 +14,12 @@ body {
 
 h1 {
     color: #e76f51;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     font-size: 2em; /* Responsive font size */
 }
 
 .animal-container {
-    margin: 10px; /* Keep some spacing */
+    margin: 5px; /* Keep some spacing */
      /* Mobile-first: Stack images vertically */
     display: flex;
     flex-direction: column;
@@ -28,8 +28,8 @@ h1 {
 }
 
 .animal-circle {
-    width: 80vw;  /* Responsive width: 80% of viewport width */
-    height: 80vw; /* Keep it a circle */
+    width: 75vw;  /* Responsive width: 80% of viewport width */
+    height: 75vw; /* Keep it a circle */
     max-width: 200px; /* Limit maximum size */
     max-height: 200px; /* Limit maximum size */
     border-radius: 50%;
@@ -37,7 +37,14 @@ h1 {
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
     object-fit: cover;
-    margin-bottom: 15px; /* Space between images */
+    margin-bottom: 10px; /* Space between images */
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .animal-circle:nth-child(4n+1){
@@ -61,4 +68,8 @@ h1 {
 
 .animal-circle:hover {
     transform: scale(1.1);
+}
+
+.animal-circle:focus {
+    outline: none !important;
 }
